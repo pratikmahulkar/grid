@@ -1,0 +1,42 @@
+<template>
+  <lightning-input
+    name="criteria"
+    placeholder="Set criteria placeholder"
+    label="Set criteria"
+    onchange={onchange}
+  >
+  </lightning-input>
+  <p>
+    <!-- Criteria : { criteria } -->
+  </p>
+  <div>
+    <div>
+      1st Grid
+    </div>
+    <lightning-datatable id="Account_Grid" key-field="Id" class="Account_Grid">
+    </lightning-datatable>
+  </div>
+  <p>
+    <!-- Criteria : { criteria } -->
+  </p>
+  <div>
+    <div>
+      2nd Grid
+    </div>
+    <lightning-datatable
+      id="Account_Grid-1"
+      key-field="Id"
+      class="Account_Grid"
+    >
+    </lightning-datatable>
+  </div>
+  <div>
+    3rd Grid
+    <lightning-datatable
+      id="Account_Grid-2"
+      key-field="Id"
+      class="Account_Grid"
+    >
+    </lightning-datatable>
+  </div>
+</template>

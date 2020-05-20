@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountPage": [
+                "accountPage/accountPage.js"
+            ],
+            "c/grid": [
+                "grid/grid.js"
+            ],
+            "c/gridhelper": [
+                "gridhelper/gridhelper.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

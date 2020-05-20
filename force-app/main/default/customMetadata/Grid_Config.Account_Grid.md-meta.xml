@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Account Grid</label>
+    <protected>false</protected>
+    <values>
+        <field>Key_Field__c</field>
+        <value xsi:type="xsd:string">Id</value>
+    </values>
+    <values>
+        <field>Query__c</field>
+        <value xsi:type="xsd:string">SELECT Id, Checkbox__c,Name, Phone, Website, PhotoUrl, Industry, Rating, Owner.Name, NumberOfEmployees FROM Account</value>
+    </values>
+    <values>
+        <field>default_sort_direction__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>enable_infinite_loading__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>hide_checkbox_column__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>hide_table_header__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>load_more_offset__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>max_column_width__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>max_row_selection__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>min_column_width__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>resize_column_disabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>resize_step__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>row_number_offset__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>show_row_number_column__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>sorted_by__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>sorted_direction__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>suppress_bottom_bar__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>wrap_text_max_lines__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

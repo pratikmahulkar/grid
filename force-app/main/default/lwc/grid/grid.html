@@ -1,0 +1,20 @@
+<template>
+  <button onclick={handleOnClick}>Click me 1</button>
+  <template if:true={record}>
+    <lightning-datatable
+      key-field="Id"
+      columns={columns}
+      data={data}
+      onrowselection={handleRowSelection}
+      onheaderaction={handleHeaderAction}
+      onloadmore={handleLoadMore}
+      onresize={handleResize}
+      onsave={handleSave}
+      onsort={handleSort}
+    >
+    </lightning-datatable>
+  </template>
+  <template if:true={error}>
+    {error}
+  </template>
+</template>
