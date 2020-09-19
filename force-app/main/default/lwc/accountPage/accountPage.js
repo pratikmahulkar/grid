@@ -7,7 +7,6 @@ export default class AccountPage extends LightningElement {
   // dataTable;
 
   onchange(e) {
-    debugger;
     // this.criteria = e.detail.value;
     // this.dataTable = this.template.querySelector("lightning-datatable");
     // getTermOptions();
@@ -15,7 +14,6 @@ export default class AccountPage extends LightningElement {
   }
 
   renderedCallback() {
-    debugger;
     console.log("renderedCallback");
     // this.dataTable = this.template.querySelector("lightning-datatable");
     // console.log(this.dataTable);

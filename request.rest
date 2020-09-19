@@ -1,2 +1,7 @@
-@token = ''
-@authToken = ''
+@url = https://pratikmahulkar-dev-ed.lightning.force.com/services/data/v34.0/sobjects
+@authToken = 00D2v000000RX9H!ARQAQLeheDgjOQs5t0oPfMShDglSjt.UNA5LyIaKUW9l.DpOmrR5mx7JYa3CiMwA1jO5CuJ8g9eOfCWeZB2rTBFF8Tuymxv5
+###
+GET {{url}}
+Authorization: Bearer {{authToken}}
+If-Modified-Since: Tue, 30 Jun 2020 00:00:00 GMT
+###
