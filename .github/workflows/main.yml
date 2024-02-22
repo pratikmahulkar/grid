@@ -32,4 +32,5 @@ jobs:
           echo ${{ steps.sfdc_auth.outputs.instance_url }}
           echo ${{ steps.sfdc_auth.outputs.id }}
           echo ${{ steps.sfdc_auth.outputs.access_token }}
+          git log --oneline
           
