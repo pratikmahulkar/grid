@@ -10,6 +10,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Extract Branch Names
+        id: extract_branches
+        run: |
+          SOURCE_BRANCH=$(echo "${{ github.event.pull_request.head.ref }}")
+          SOURCE_BRANCH_SHA=$(echo "${{ github.event.pull_request.head.sha }}")
+          DESTINATION_BRANCH=$(echo "${{ github.event.pull_request.base.ref }}")
+          DESTINATION_BRANCH_SHA=$(echo "${{ github.event.pull_request.base.sha }}")
+          echo "::set-output name=source_branch::$SOURCE_BRANCH"
+          echo "::set-output name=destination_branch::$DESTINATION_BRANCH"
+          echo "::set-output name=source_branch_sha::$SOURCE_BRANCH_SHA"
+          echo "::set-output name=destination_branch_sha::$DESTINATION_BRANCH_SHA"
+
+      - name: Print Branch Names
+        run: |
+          echo "Source Branch: ${{ steps.extract_branches.outputs.source_branch }}"
+          echo "Destination Branch: ${{ steps.extract_branches.outputs.destination_branch }}"
+          echo "Source Branch sha: ${{ steps.extract_branches.outputs.source_branch_sha }}"
+          echo "Destination Branch sha: ${{ steps.extract_branches.outputs.destination_branch_sha }}"
 
       - name: Run git diff
-        run: git diff --name-status ${{github.event.pull_request.base.sha}}..${{ github.event.pull_request.head.sha }}
+        run: git diff --name-status ${{github.event.pull_request.base.ref }}..${{ steps.extract_branches.outputs.source_branch  }}
