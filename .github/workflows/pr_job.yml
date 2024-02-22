@@ -1,0 +1,22 @@
+name: Extract Branch Names
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  extract_branch_names:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract Branch Names
+        id: extract_branches
+        run: |
+          SOURCE_BRANCH=$(echo "${{ github.event.pull_request.head.ref }}")
+          DESTINATION_BRANCH=$(echo "${{ github.event.pull_request.base.ref }}")
+          echo "::set-output name=source_branch::$SOURCE_BRANCH"
+          echo "::set-output name=destination_branch::$DESTINATION_BRANCH"
+
+      - name: Print Branch Names
+        run: |
+          echo "Source Branch: ${{ steps.extract_branches.outputs.source_branch }}"
+          echo "Destination Branch: ${{ steps.extract_branches.outputs.destination_branch }}"
