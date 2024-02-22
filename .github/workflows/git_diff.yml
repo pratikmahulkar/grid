@@ -1,0 +1,15 @@
+name: Extract Branch Names
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  extract_branch_names:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run git diff
+        run: git diff --name-status ${GITHUB_SHA}..${{ github.event.pull_request.head.sha }}
