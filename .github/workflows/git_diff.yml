@@ -1,4 +1,4 @@
-name: Extract Branch Names
+name: Git diff Branch Names
 
 on:
   pull_request:
